@@ -18,3 +18,6 @@ This is a server for the spaced repetition client. The app allows a user to lear
 ![guess](/images/guess.PNG)
 ![correct](/images/correct.PNG)
 ![incorrect](/images/incorrect.PNG)
+
+Technologies: 
+When building this server, knex, postgress, express, javascript, chai, mocha, nodemon, bcrypt, and json web token were used.
