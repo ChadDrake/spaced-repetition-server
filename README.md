@@ -1,52 +1,20 @@
-# Spaced repetition API!
+Spaced-Repetiton Server
+Live at:
+API DOCUMENTATION
+/api/auth/token POST takes in a username and password value. It will return an auth token.
+/api/auth/token PUT takes in an auth token just before expiry. it will return a new auth token.
+/api/user POST takes in a username, password, and name. It will return a serialized version oif the user it creates in the database.
+/api/language GET returns the user language and an array of word objects.
+/api/language/head GET returns the next word object for someone to learn.
+/api/language/guess POST takes in a user's guess and returns an object holding data on their correct and incorrect counts, total score, if they got it right, and their next word.
 
-## Local dev setup
+Summary
+This is a server for the spaced repetition client. The app allows a user to learn a new language using spaced repetition. It allows a user to log in and persist their data as well.
 
-If using user `dunder-mifflin`:
-
-```bash
-mv example.env .env
-createdb -U postgres spaced-repetition
-createdb -U postgres spaced-repetition-test
-```
-
-If your `dunder-mifflin` user has a password be sure to set it in `.env` for all appropriate fields. Or if using a different user, update appropriately.
-
-```bash
-npm install
-npm run migrate
-env MIGRATION_DB_NAME=spaced-repetition-test npm run migrate
-```
-
-And `npm test` should work at this point
-
-## Configuring Postgres
-
-For tests involving time to run properly, configure your Postgres database to run in the UTC timezone.
-
-1. Locate the `postgresql.conf` file for your Postgres installation.
-   1. E.g. for an OS X, Homebrew install: `/usr/local/var/postgres/postgresql.conf`
-   2. E.g. on Windows, _maybe_: `C:\Program Files\PostgreSQL\11.2\data\postgresql.conf`
-   3. E.g on Ubuntu 18.04 probably: '/etc/postgresql/10/main/postgresql.conf'
-2. Find the `timezone` line and set it to `UTC`:
-
-```conf
-# - Locale and Formatting -
-
-datestyle = 'iso, mdy'
-#intervalstyle = 'postgres'
-timezone = 'UTC'
-#timezone_abbreviations = 'Default'     # Select the set of available time zone
-```
-
-## Scripts
-
-Start the application `npm start`
-
-Start nodemon for the application `npm run dev`
-
-Run the tests mode `npm test`
-
-Run the migrations up `npm run migrate`
-
-Run the migrations down `npm run migrate -- 0`
+![register](/images/register.PNG)
+![login](/images/login.PNG)
+![dashboard1](/images/dashboard1.PNG)
+![dashboard2](/images/dashboard2.PNG)
+![guess](/images/guess.PNG)
+![correct](/images/correct.PNG)
+![incorrect](/images/incorrect.PNG)
