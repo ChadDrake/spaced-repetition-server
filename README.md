@@ -1,5 +1,5 @@
 Spaced-Repetiton Server
-Live at:
+Live at: https://chaddrake-spaced-repetition.herokuapp.com/
 API DOCUMENTATION
 /api/auth/token POST takes in a username and password value. It will return an auth token.
 /api/auth/token PUT takes in an auth token just before expiry. it will return a new auth token.
@@ -18,3 +18,6 @@ This is a server for the spaced repetition client. The app allows a user to lear
 ![guess](/images/guess.PNG)
 ![correct](/images/correct.PNG)
 ![incorrect](/images/incorrect.PNG)
+
+Technologies: 
+When building this server, knex, postgress, express, javascript, chai, mocha, nodemon, bcrypt, and json web token were used.
