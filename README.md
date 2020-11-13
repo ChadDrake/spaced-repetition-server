@@ -1,5 +1,5 @@
 Spaced-Repetiton Server
-Live at:
+Live at: https://chaddrake-spaced-repetition.herokuapp.com/
 API DOCUMENTATION
 /api/auth/token POST takes in a username and password value. It will return an auth token.
 /api/auth/token PUT takes in an auth token just before expiry. it will return a new auth token.
